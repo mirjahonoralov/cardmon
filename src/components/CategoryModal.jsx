@@ -16,11 +16,12 @@ const CategoryModal = ({ values, modalId, modalName, handleSubmit }) => {
     setCost(defaultValue);
   };
 
-  useEffect(() => values && setCost({ ...cost, ...values }), [values]);
   useEffect(
     () => (cost.price ? setCloseModal(true) : setCloseModal(false)),
     [cost]
   );
+
+  useEffect(() => values && setCost({ ...values }), [values]);
 
   return (
     <div
