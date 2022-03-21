@@ -2,14 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import { Context } from "../Context/ContectProvider";
 
-const CategoryModal = ({
-  values,
-  modalId,
-  modalName,
-  handleSubmit,
-  defaultValue,
-}) => {
-  const { categories } = useContext(Context);
+const CategoryModal = ({ values, modalId, modalName, handleSubmit }) => {
+  const { categories, defaultValue } = useContext(Context);
 
   const [cost, setCost] = useState(defaultValue);
   const [closeModal, setCloseModal] = useState(false);
