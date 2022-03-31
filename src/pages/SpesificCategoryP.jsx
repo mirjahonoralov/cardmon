@@ -24,12 +24,11 @@ const SpesificCategoryP = () => {
   return (
     <>
       <div>
-        <Link
-          to="/"
-          className="text-decoration-none position-absolute"
-          style={{ left: "15px", top: "15px" }}
-        >
-          <div className="badge bg-dark text-white fs-6 d-flex align-items-center">
+        <Link to="/" className="text-decoration-none">
+          <div
+            style={{ width: "80px" }}
+            className="badge bg-dark text-white fs-6 d-flex align-items-center mt-1"
+          >
             <BiArrowBack />
             Back
           </div>

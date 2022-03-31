@@ -21,11 +21,15 @@ const OperationsP = () => {
   return (
     <>
       <div className="d-flex mt-4 flex-wrap">
-        {costs.map((card, id) => (
-          <div className="col-lg-4 col-md-6 col-12 p-2" key={id}>
-            <CostCard card={card} setEditCosts={setEditCosts} />
-          </div>
-        ))}
+        {costs[0] ? (
+          costs.map((card, id) => (
+            <div className="col-lg-4 col-md-6 col-12 p-2" key={id}>
+              <CostCard card={card} setEditCosts={setEditCosts} />
+            </div>
+          ))
+        ) : (
+          <h2>No operations</h2>
+        )}
       </div>
 
       <CategoryModal
