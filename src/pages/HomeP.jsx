@@ -8,9 +8,10 @@ import { Context } from "../Context/ContectProvider";
 const HomeP = () => {
   const { reduce_category, handleSubmit, costs } = useContext(Context);
   let values = {};
-  const myData = reduce_category.map((elements) => {
-    return { x: elements.category, y: elements.price };
-  });
+  const myData = reduce_category.map((elements) => ({
+    x: elements.category,
+    y: elements.price,
+  }));
   const chartColors = [
     "blue",
     "yellow",

@@ -21,7 +21,7 @@ const CategoryModal = ({ values, modalId, modalName, handleSubmit }) => {
     [cost]
   );
 
-  useEffect(() => values && setCost({ ...values }), [values]);
+  useEffect(() => values && setCost({ ...cost, ...values }), [values]);
 
   return (
     <div
